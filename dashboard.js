@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const { createPath } = require('./helpers/createPath');
+const postRouter = require('./routes/routes');
 
 require('dotenv').config();
 const app = express();
@@ -8,11 +10,16 @@ const PORT = process.env.PORT || 7000;
 const HOST = process.env.HOST || 'localhost';
 const DB = process.env.MONGO_URL;
 
+app.set('view engine','ejs');
 app.use(express.json());
+app.use(express.static('public'));
 
-// this route will be removed
-app.use('/', (req,res) => {
-    res.json({ message: 'Server running!' });
+app.use(postRouter);
+
+app.use((req,res) => {
+    res
+        .status(404)
+        .render(createPath('error'), { title: 'Error' });
 });
 
 const init = () => {

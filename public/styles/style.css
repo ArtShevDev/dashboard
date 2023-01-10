@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+html,body {
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header {
+
+}
+.header__content {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+
+}
+/* тестировал, переделать!!! */
+@media(max-width: 960px) {
+    .header__content {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+.header-item {
+    flex: 1 1 100%;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+}
+.header__text {
+    color: #e84393;
+    font-weight: 600;
+}
+.header__alert {
+ display: flex;
+ justify-content: flex-end;
+}
+.header__alert-link {
+    font-size: 22px;
+    color: #a2b3cf;
+    position: relative;
+}
+.header__alert-link::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: 1px;
+    background-color: #ec5252;
+    box-shadow: 0 0 0 1.5px #fff;
+    visibility: visible;
+}
+/* данный hover времмное решение до написания логики */
+.header__alert-link:hover::after {
+    visibility: hidden;
+}
+.header__search > *:not(:last-child) {
+    margin-right: 12px;
+}
+.logo {
+    display: table;
+    background-color: #e84393;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+}
+.logo__link {
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    font-weight: 600;
+}
+.search {
+    width: 320px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #eeeff7;
+}
+.fa-search {
+    font-size: 20px;
+    color: #a7a7a7;
+}
+/* тестировал, переделать!!! */
+@media(max-width: 1024px) {
+    .search {
+        width: 240px;
+    }
+}
+.search__link:hover .search__icon {
+    color: #e84393;
+}
+.search__icon {
+    margin-left: 20px;
+    transition: color .1s linear;
+}
+.search__input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 28px;
+    border-radius: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+    background-color: #eeeff7;
+    color: #e84393;
+}
+.header__menu {
+    width: 100%;
+    display: flex;
+}
+.main-menu {
+    margin: 0 auto;
+    font-size: 0;
+}
+.main-menu__link {
+    position: relative;
+    color: #e84393;
+    font-size: 18px;
+    font-weight: 400;
+}
+.main-menu__link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: #e84393;
+    transition: all .2s linear;
+}
+.main-menu__link:hover::after {
+    width: 100%;
+}
+.main-menu .main-menu__link:not(:last-child) {
+    margin-right: 40px;
+}
+.page {
+    max-height: 100%;
+    flex: 1 1 auto;
+    padding-top: 60px;
+    background: #e7ecf5;
+}
