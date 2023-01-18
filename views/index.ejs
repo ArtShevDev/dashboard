@@ -17,8 +17,11 @@
     </header>
     <main class="page">
         <div class="page__content _container">
-            <h1><%= title %></h1>
-            <div class="page__data">
+            <div class="task">
+                <%- include('./partials/task-header.ejs'); %>
+                <%- include('./partials/task-board.ejs'); %>
+                <%- include('./partials/task-progress.ejs'); %>
+            </div>
             </div>
         </div>
     </main>

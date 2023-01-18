@@ -21,6 +21,17 @@ a {
     max-width: 1440px;
     margin: 0 auto;
 }
+::-webkit-scrollbar { 
+	width: 0;  /*Толщина скролла*/
+}
+::-webkit-scrollbar-track {
+	background-color: #fff; /*Цвет скролла*/
+    
+} 
+::-webkit-scrollbar-thumb { 
+	border-radius: 5px; /*Закругление ползунка*/
+	background-color: #ccc; /*Цвет ползунка*/
+} 
 .header {
 
 }
@@ -161,8 +172,250 @@ a {
     margin-right: 40px;
 }
 .page {
-    max-height: 100%;
     flex: 1 1 auto;
     padding-top: 60px;
-    background: #e7ecf5;
+    background: #ecf1f9;
 }
+.task {
+    height: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 20%);
+    grid-template-rows: auto 620px;
+    grid-template-areas: 
+        "task-header task-progress"
+        "task-board task-progress";
+    grid-gap: 20px;
+}
+.task-header {
+    grid-area: task-header;
+}
+.horizontal-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-header__title {
+    font-size: 34px;
+    font-weight: 500;
+}
+.task-header__userbox {
+}
+.userbox {
+    display: flex;
+}
+.userbox__user-link {
+    font-size: 0;
+    display: block;
+}
+.userbox__user-link:not(:last-child) {
+    margin-right: 6px;
+}
+.userbox__img {
+    width: 28px;
+    height: 28px;
+}
+.userbox__create-user {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    border-radius: 50%;
+    border: 1px dashed #c592a5;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: table;
+    text-align: center;
+    cursor: pointer;
+}
+.userbox__create-user > i {
+    display: table-cell;
+    vertical-align: middle;
+    color: #c592a5;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.task-board {
+    grid-area: task-board;
+    display: grid;
+    grid-template-rows: minmax(auto, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+}
+.task-board > * {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+.task-board__content {
+    flex: 1 1 auto  ;
+    overflow: auto;
+    border-radius: 15px;
+}
+.task-board__content > *:not(:last-child) {
+    margin-bottom: 14px;
+}
+.task-options {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.fa-ellipsis {
+    color: #a8b5cb;
+    font-size: 18px;
+}
+.board-title {
+    font-weight: 600;
+}
+.task-board__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px 0 18px 0;
+}
+
+/* user-card */
+
+.user-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 14px;
+}
+.user-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-card__title {
+    padding: 6px 12px;
+    background-color: #f2dcf5;
+    color: #9d1cb2;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 18px;
+}
+.user-card__options {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.user-card__desc {
+    margin: 16px 0 20px 0;
+    font-size: 14px;
+}
+.user-card__footer {
+
+}
+.user-card__attr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #a8b5cb;
+}
+.user-card__attr > * {
+    display:flex;
+    align-items: center;
+    padding: 4px 0;
+}
+.user-card__attr > * > :nth-child(2) {
+    margin-left: 8px;
+    font-size: 14px;
+}
+.user-card__attr > * > :nth-child(1) {
+    cursor: pointer;
+}
+.add-card {
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #a8b5cb;
+    padding: 8px 0;
+    border: 1px solid #a8b5cb;
+    border-radius: 15px;
+    transition: all .2s linear;
+}
+.add-card:hover {
+    border-color: #e84393;
+color: #e84393;
+
+}
+.add-card > *:not(:last-child) {
+    margin-right: 12px;
+}
+.add-card__icon {
+}
+.add-card__text {
+
+}   
+.user-calendar {
+}
+.user-calendar > i:hover {
+    color: #e84393;
+}
+.calendar-date {
+}
+.user-messages {
+}
+.user-messages > i {
+    position: relative;
+}
+.user-messages > i:hover {
+    color: #e84393;
+}
+.user-messages > i::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    background-color: #ec5252;
+    box-shadow: 0 0 0 1.5px #fff;
+    visibility: visible;
+}
+.message-count {
+}
+.user-attach-file {
+}
+.user-attach-file> i:hover {
+    color: #e84393;
+}
+.attach-file__count {
+}
+.user__img {
+}
+
+/* user-card */
+.task-board__ready {
+    
+}
+.task-board__onprogress {
+
+}
+.task-board__needsreview {
+
+}
+.task-board__done {
+    
+}
+.task-progress {
+    grid-area: task-progress;
+    padding-left: 40px;
+    
+    position: relative;
+}
+.task-progress::after {
+    content: ' ';
+    width: 1px;
+    height: 100%;
+    background-color: #a8b5cb;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
