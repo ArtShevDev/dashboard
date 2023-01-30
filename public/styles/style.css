@@ -274,19 +274,19 @@ a {
     margin: 18px 0 18px 0;
 }
 
-/* user-card */
+/* work-card */
 
-.user-card {
+.work-card {
     background-color: #ffffff;
     border-radius: 15px;
     padding: 14px;
 }
-.user-card__header {
+.work-card__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.user-card__title {
+.work-card__title {
     padding: 6px 12px;
     background-color: #f2dcf5;
     color: #9d1cb2;
@@ -294,34 +294,34 @@ a {
     font-weight: 400;
     border-radius: 18px;
 }
-.user-card__options {
+.work-card__options {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.user-card__desc {
+.work-card__desc {
     margin: 16px 0 20px 0;
     font-size: 14px;
 }
-.user-card__footer {
+.work-card__footer {
 
 }
-.user-card__attr {
+.work-card__attr {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #a8b5cb;
 }
-.user-card__attr > * {
+.work-card__attr > * {
     display:flex;
     align-items: center;
     padding: 4px 0;
 }
-.user-card__attr > * > :nth-child(2) {
+.work-card__attr > * > :nth-child(2) {
     margin-left: 8px;
     font-size: 14px;
 }
-.user-card__attr > * > :nth-child(1) {
+.work-card__attr > * > :nth-child(1) {
     cursor: pointer;
 }
 .add-card {
@@ -389,7 +389,7 @@ color: #e84393;
 .user__img {
 }
 
-/* user-card */
+/* work-card */
 .task-board__ready {
     
 }
@@ -405,7 +405,6 @@ color: #e84393;
 .task-progress {
     grid-area: task-progress;
     padding-left: 40px;
-    
     position: relative;
 }
 .task-progress::after {
@@ -418,4 +417,36 @@ color: #e84393;
     top: 0;
     left: 0;
 }
+.task-progress__bars {
+}
+.progress-bars {
+}
+.progress-bars__first {
+}
+.progress-bars__first-title {
+}
+.progress-bars__first-states {
+}
+.progress-bars__first-progress {
+}
 
+
+/* test */
+.new-task {
+    /* height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all .1s ease; */
+    opacity: 0;
+    height: 0;
+    border: 1px solid red;
+    transition: all .5s;
+}
+.show-new-task {
+    opacity: 1;
+    height: 150px;
+    /* visibility: visible;
+    transform: translateY(0);
+    opacity: 1; */
+}
