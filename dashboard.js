@@ -12,6 +12,7 @@ const DB = process.env.MONGO_URL;
 
 app.set('view engine','ejs');
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.use(postRouter);
@@ -24,12 +25,12 @@ app.use((req,res) => {
 
 const init = () => {
     try {
-        // mongoose.set('strictQuery', true);
-        // mongoose
-        //     .connect(DB, { useNewUrlParser:true, useUnifiedTopology:true }, (error) => {
-        //         if(error) throw error;
-        //         console.log('Connected to DB'); 
-        //     });
+        mongoose.set('strictQuery', true);
+        mongoose
+            .connect(DB, { useNewUrlParser:true, useUnifiedTopology:true }, (error) => {
+                if(error) throw error;
+                console.log('Connected to DB'); 
+            });
         app.listen(PORT, HOST, (error) => {
             if(error) throw error;
             console.log(`Server running on port ${PORT}...`);

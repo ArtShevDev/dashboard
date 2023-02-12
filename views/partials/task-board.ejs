@@ -7,7 +7,8 @@
             </button>
         </div>
         <div class="task-board__content">
-            <div class="add-card" data-addcard="taskBoardDeady">
+            <%- include('./new-task.ejs'); %>
+            <div class="add-card">
                 <i class="fa-solid fa-plus add-card__icon"></i>
                 <span class="add-card__text">add card</span>
             </div>
@@ -21,7 +22,8 @@
             </button>
         </div>
         <div class="task-board__content">
-            <div class="add-card" data-addcard="taskBoardOnprogress">
+            <%- include('./new-task.ejs'); %>
+            <div class="add-card">
                 <i class="fa-solid fa-plus add-card__icon"></i>
                 <span class="add-card__text">add card</span>
             </div>
@@ -35,7 +37,8 @@
             </button>
         </div>
         <div class="task-board__content">
-            <div class="add-card" data-addcard="taskBoardNeedsReqview">
+            <%- include('./new-task.ejs'); %>
+            <div class="add-card">
                 <i class="fa-solid fa-plus add-card__icon"></i>
                 <span class="add-card__text">add card</span>
             </div>
@@ -51,7 +54,7 @@
         <div class="task-board__content">
             <%- include('./work-card.ejs'); %>
             <%- include('./new-task.ejs'); %>
-            <div class="add-card" data-addcard="taskBoardDone">
+            <div class="add-card">
                 <i class="fa-solid fa-plus add-card__icon"></i>
                 <span class="add-card__text">add card</span>
             </div>

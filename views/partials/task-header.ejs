@@ -1,19 +1,15 @@
 <section class="task-header horizontal-flex">
-    <div class="task-header__title">Homepage Design</div>
+    <div class="task-header__title"><%= taskHeaderTitle %></div>
     <div class="task-header__userbox">
         <div class="userbox">
-            <a href="#" class="userbox__user-link">
-                <img class="userbox__img" src="/img/sys_icon/icon-user-green.png" alt="avatar">
-            </a>
-            <a href="#" class="userbox__user-link">
-                <img class="userbox__img" src="/img/sys_icon/icon-user-blue.png" alt="avatar">
-            </a>
-            <a href="#" class="userbox__user-link">
-                <img class="userbox__img" src="/img/sys_icon/icon-user-red.png" alt="avatar">
-            </a>
-            <div class="userbox__create-user">
+            <% users.forEach(user => { %>
+                <a href="#" class="userbox__user-link">
+                    <img class="userbox__img" src="/img/sys_icon/<%= user.images.avatar %>" alt="avatar">
+                </a>
+            <% }) %>
+            <a href="#" class="create-element" data-path="first" data-animation="fadeInUp" data-speed="700">
                 <i class="fa-solid fa-plus"></i>
-            </div>
+            </a>
         </div>
     </div>
 </section>
