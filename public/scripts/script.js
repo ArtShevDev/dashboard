@@ -149,3 +149,7 @@ class Modal {
 const modal = new Modal({
     isOpen: (modal) => {}
 });
+
+const modalSex = document.querySelector('#modal-sex');
+const modalSend = document.getElementById('modal__send');
+

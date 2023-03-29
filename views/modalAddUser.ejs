@@ -1,45 +1,61 @@
 <div class="bbb">
   <!-- <button data-path="first" data-animation="fadeInUp" data-speed="700">open</button> -->
-  <div class="modal">
-    <div class="modal-container" data-target="first">
+  <div class="modal ">
+    <div class="modal-container " data-target="first">
+      <h3 class="form_title">Добавить исполнителя</h3>
       <button class="modal__close">close</button>
       <form class="modal__form" method="post" action="/adduser">
-        <label for="modal__nikname">
-          <input id="modal__nikname" type="text" name="nikname" placeholder="nikname">
-        </label>
-        <label for="modal__firstname">
-          <input id="modal__firstname" type="text" name="firstname" placeholder="firstname">
-        </label>
-        <label for="modal__lastname">
-          <input id="modal__lastname" type="text" name="lastname" placeholder="lastname">
-        </label>
-        <label for="modal__age">
-          <input id="modal__age" type="date" name="birthday">
-        </label>
-        <label for="modal__sex">
+        <div class="modal__group">
+          <input class="modal__input" id="modal__nikname" type="text" name="nikname" placeholder=" ">
+          <label class="modal__label">nikname</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__firstname" type="text" name="firstname" placeholder=" ">
+          <label class="modal__label">firstname</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__lastname" type="text" name="lastname" placeholder=" ">
+          <label class="modal__label">lastname</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__password" type="password" name="password" placeholder=" ">
+          <label class="modal__label">password</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__repassword" type="password" name="repassword" placeholder=" ">
+          <label class="modal__label">repeate password</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__age" type="date" name="birthday" placeholder=" ">
+          <label class="modal__label">your age</label>
+        </div>
+        <div class="modal__group">
           <select name="modal__sex" name="sex" id="modal-sex">
             <option value="male">мужчина</option>
             <option value="famale">женщина</option>
           </select>
-        </label>
-        <label for="modal__tel">
-          <input id="modal__tel" type="tel" name="tel" placeholder="tel">
-        </label>
-        <label for="modal__email">
-          <input id="modal__tel" type="email" name="email" placeholder="e-mail">
-        </label>
-        <label for="modal__img__avatar">
-          <input id="modal__img-avatar" name="" type="file">
-        </label>
-        <label for="modal__country">
-          <input id="modal__country" type="text" name="country" placeholder="country">
-        </label>
-        <label for="modal__city">
-          <input id="modal__city" type="text" name="city" placeholder="city">
-        </label>
-        <label for="modal__sendForm">
-          <button id="modal__send">Создать</button>
-        </label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__tel" type="text" name="tel" placeholder=" ">
+          <label class="modal__label">phone</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__email" type="email" name="email" placeholder=" ">
+          <label class="modal__label">email</label>
+        </div>
+        <div class="modal__group">
+          <input class="modal__input" id="modal__img__avatar" type="file" name="userphoto" placeholder=" ">
+          <label class="modal__label">photo</label>
+        </div>
+            <div class="modal__group">
+          <input class="modal__input" id="modal__country" type="text" name="country" placeholder=" ">
+          <label class="modal__label">country</label>
+        </div>
+            <div class="modal__group">
+          <input class="modal__input" id="modal__city" type="text" name="city" placeholder=" ">
+          <label class="modal__label">city</label>
+        </div>
+        <button id="modal__send">Создать</button>
       </form>
     </div>
   </div>

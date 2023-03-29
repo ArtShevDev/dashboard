@@ -277,11 +277,19 @@ a {
     position: relative;
     display: none;
     vertical-align: middle;
-    width: 500px;
+    width: 800px;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 5px rgb(0,0,0);
+    padding: 6px;
+}
+.modal__form > label > input {
+    padding: 4px 2px;
+    width: 80%;
+    margin: 4px;
+    font-size: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 .modal__close {
     position: absolute;
